@@ -1,0 +1,16 @@
+<table class="table table-hover">
+  <thead>
+  <th>名字</th>
+  <th>所在地</th>
+  <th>手机</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let emp of list">
+    <td (click)="onEdit(emp)">{{emp.empCode}} - {{emp.fullName}}</td>
+    <td (click)="onEdit(emp)">{{emp.position}}</td>
+    <td (click)="onEdit(emp)">{{emp.mobile}}</td>
+    <td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
+  </tr>
+  </tbody>
+</table>

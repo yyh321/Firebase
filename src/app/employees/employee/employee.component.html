@@ -1,0 +1,29 @@
+<h1 class="display-4">用户注册</h1>
+<form #form="ngForm" autocapitalize="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+  <div class="form-group">
+    <input name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName"  placeholder="fullName" class="form-control" required>
+    <div *ngIf="fullName.invalid && fullName.touched" class="validation-error">This field is required. </div>
+  </div>
+  <div class="form-group">
+    <input name="position" #fullName="ngModel" [(ngModel)]="service.formData.position"  placeholder="position" class="form-control">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input name="empCode" #fullName="ngModel" [(ngModel)]="service.formData.empCode"  placeholder="empCode" class="form-control">
+    </div>
+    <div class="form-group col-md-6">
+      <input name="mobile" #fullName="ngModel" [(ngModel)]="service.formData.mobile" placeholder="mobile" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled] = "form.invalid" class="btn btn-lg btn-block btn-info">提交</button>
+  </div>
+</form>
+
+
+
+
+
+
+
